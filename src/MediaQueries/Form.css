@@ -1,0 +1,36 @@
+.divClass {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 10px;
+  background-color: lightcoral;
+}
+
+@media (max-width: 728px) {
+  .divClass {
+    flex-direction: column;
+    padding: 10px;
+    background-color: lightgreen;
+  }
+}
+
+@media (max-width: 480px) {
+  .divClass {
+    padding: 5px;
+    background-color: lightskyblue;
+  }
+}
+.form {
+  flex: 1;
+  min-width: 200px;
+  background-color: white;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgb(0, 0, 0, 0.1);
+}
+
+@media (max-width: 758px) {
+  .form {
+    min-width: 100%;
+  }
+}

@@ -1,0 +1,18 @@
+.backGraoundColor{
+    background-color: lightblue;
+    padding: 20px;
+}
+
+@media(max-width:728px){
+    .backGraoundColor{
+        background-color: lightgreen;
+        padding: 10px;
+    }
+}
+
+@media(max-width:480px){
+    .backGraoundColor{
+        background-color: lightcoral;
+        padding: 5px;
+    }
+}
