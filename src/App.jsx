@@ -15,6 +15,15 @@ import UseID from "./Hooks/UseId";
 import One from "./MediaQueries/One";
 import { Form } from "./MediaQueries/Form";
 import Navbar from "./MediaQueries/Navbar";
+import { ButtonWithClickTracking } from "./HOC/Onet/One/Button";
+import { FancyTextComponent } from "./HOC/Onet/Two/TextComponent";
+import { PostComponentWithData } from "./HOC/Onet/DataFetching/PostComponent";
+import { PrivateComponentComponentWithAuthorization } from "./HOC/Onet/WithAuthorization/PrivateComponent";
+import { LoginComponentWithTranslation } from "./HOC/Onet/LanguageSwitching/LoginComponent";
+import Search from "./Functionalies/Search";
+import { SearchTwo } from "./Functionalies/SearchTwo";
+import Pagination from "./Functionalies/Pagination";
+import SearchThree from "./Functionalies/SearchThree";
 function App() {
   return (
     <>
@@ -51,7 +60,29 @@ function App() {
       {/* <UseID/> */}
       {/* <One/>
       <Form/> */}
-      <Navbar/>
+      {/* <Navbar />
+      <div>
+        <h1>HOC Example</h1>
+        <ButtonWithClickTracking label="Click Me" trackingInfo="Button 1" />
+
+        <ButtonWithClickTracking label="Click Me Too" trackingInfo="Button 2" />
+      </div> */}
+
+      {/* <div>
+        <h1>Hoc Example 2</h1>
+        <FancyTextComponent text="hi how are you" />
+        <FancyTextComponent text="hi " />
+        <PostComponentWithData />
+        <PrivateComponentComponentWithAuthorization userRole="admin" />
+        <PrivateComponentComponentWithAuthorization userRole="guest" />
+        <LoginComponentWithTranslation />
+      </div> */}
+
+      <div>
+        {/* <Search/> */}
+        {/* <SearchThree/> */}
+        <SearchTwo />
+      </div>
     </>
   );
 }
