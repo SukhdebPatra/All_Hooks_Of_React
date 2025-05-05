@@ -53,27 +53,39 @@ export const SearchTwo = () => {
             </tr>
           </thead>
           <tbody>
-            {userData
-              .filter(
-                ({ name, email }) =>
-                  name.toLowerCase().includes(query.toLowerCase()) ||
-                  email.toLowerCase().includes(query.toLowerCase())
-              )
-              .map((user) => (
-                <tr key={user.id}>
-                  <td>{user.id}</td>
-                  <td>{user.name}</td>
-                  <td>{user.email}</td>
-                  <td>
-                    <button
-                      className="btn btn-sm btn-danger"
-                      onClick={() => handleDelete(user.id)}
-                    >
-                      Delete
-                    </button>
-                  </td>
-                </tr>
-              ))}
+            {userData.filter(
+              ({ name, email }) =>
+                name.toLowerCase().includes(query.toLowerCase()) ||
+                email.toLowerCase().includes(query.toLowerCase())
+            ).length > 0 ? (
+              userData
+                .filter(
+                  ({ name, email }) =>
+                    name.toLowerCase().includes(query.toLowerCase()) ||
+                    email.toLowerCase().includes(query.toLowerCase())
+                )
+                .map((user) => (
+                  <tr key={user.id}>
+                    <td>{user.id}</td>
+                    <td>{user.name}</td>
+                    <td>{user.email}</td>
+                    <td>
+                      <button
+                        className="btn btn-sm btn-danger"
+                        onClick={() => handleDelete(user.id)}
+                      >
+                        Delete
+                      </button>
+                    </td>
+                  </tr>
+                ))
+            ) : (
+              <tr>
+                <td colSpan="4" className="text-center">
+                  No data found
+                </td>
+              </tr>
+            )}
           </tbody>
         </table>
       </div>

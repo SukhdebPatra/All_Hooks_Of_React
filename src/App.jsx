@@ -24,6 +24,7 @@ import Search from "./Functionalies/Search";
 import { SearchTwo } from "./Functionalies/SearchTwo";
 import Pagination from "./Functionalies/Pagination";
 import SearchThree from "./Functionalies/SearchThree";
+import GeoLocation from "./Functionalies/GeoLocation";
 function App() {
   return (
     <>
@@ -82,6 +83,7 @@ function App() {
         {/* <Search/> */}
         {/* <SearchThree/> */}
         <SearchTwo />
+        {/* <GeoLocation/> */}
       </div>
     </>
   );
